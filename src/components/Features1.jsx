@@ -23,25 +23,23 @@ export const Features1 = () => {
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="block-subtitle">Embrace Innovation</span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                Unlike any tool you used before
-              </h2>
+              Effortless Extraction of Travel Data
+                            </h2>
               <p className="mb-10 text-secondaryText leading-loose">
-                Discover a new level of data analysis with our innovative and
-                user-friendly platform. Transform your business needs with
-                actionable insights.
+                Seamless Document Processing
               </p>
               <ul className="mb-6 text-primaryText">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Real-time data visualization</span>
+                  <span>Upload PDFs or images of your travel documents</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Advanced predictive analytics</span>
+                  <span>Get structured data in JSON format</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Seamless integration with APIs</span>
+                  <span>Supports flight purchases, activity reservations, hotel reservations, and car reservations</span>
                 </li>
               </ul>
             </div>

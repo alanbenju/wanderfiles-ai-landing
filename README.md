@@ -1,4 +1,4 @@
-# Tailcast
+# wanderfiles-ai
 
 Dark themed website template built on AstroJS, designed for fictional startup
 
@@ -7,7 +7,7 @@ Dark themed website template built on AstroJS, designed for fictional startup
 Astro, React, Tailwind, Framer Motion
 
 ## Live link
-[https://tailcast.vercel.app/](https://tailcast.vercel.app/)
+[https://wanderfiles-ai.vercel.app/](https://wanderfiles-ai.vercel.app/)
 
 ##  Project Structure
 

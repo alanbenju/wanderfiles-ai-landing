@@ -4,12 +4,30 @@ import { motion } from "framer-motion";
 import { InvitationModal } from "./InvitationModal";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
-const pricingData = [
-  "Seamless integration",
-  "Real-time data visualization",
-  "Advanced predictive analytics",
-  "Collaborative environment",
-  "Responsive customer support",
+const pricingDataBasic = [
+  "2 cents per image/page",
+  "Up to 400 images per month",
+  "Ideal for small businesses and individual users",
+  "Access to basic support",
+  "Monthly basic reports",
+  "1 Personalized file to fit your needs and retrieve more accurated results"
+];
+
+const pricingDataStandard = [
+  "1.2 cents per image/page",
+  "Up to 2500 images per month",
+  "Suitable for medium-sized businesses",
+  "Priority support",
+  "Monthly basic reports",
+  "Personalized files to fit your needs",
+  "5 Personalized fils to fit your needs and retrieve more accurated results"
+];
+
+const pricingDataCustom = [
+  "Tailored to meet your unique needs",
+  "Provide example files and specify the keys you need",
+  "Work directly with us to create custom extraction models",
+  "Receive personalized support",
 ];
 
 export const Pricing = () => {
@@ -37,48 +55,28 @@ export const Pricing = () => {
                 Choose your best plan
               </h2>
               <p className="mb-6 text-secondaryText">
-                Select the plan that suits your needs and benefit from our
-                analytics tools.
+                Select the plan that suits your needs and benefit tools.
               </p>
-              <label className="mx-auto bg-bgDark3 relative flex justify-between items-center group text-xl w-44 h-12 rounded-lg pr-36 pl-1 cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="peer appearance-none"
-                  checked={!isMonthly}
-                  onChange={handleChange}
-                />
-                <span className="h-8 w-[5.5rem] flex items-center pr-2 bg-bgDark3 after:rounded-lg duration-300 ease-in-out  after:w-[30rem] after:h-10  after:bg-primaryColor   after:shadow-md after:duration-300 peer-checked:after:translate-x-[5.5rem] cursor-pointer"></span>
-                <div className="flex absolute text-primaryText text-sm font-bold">
-                  <div
-                    className={
-                      isMonthly ? "mr-9 ml-3" : "mr-9 ml-3 text-gray-400"
-                    }
-                  >
-                    Monthly
-                  </div>
-                  <div className={isMonthly ? "text-gray-400" : ""}>Yearly</div>
-                </div>
-              </label>
             </div>
             <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center mt-20">
               <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
                 <div className="p-8 bg-bgDark3 rounded-3xl">
                   <h3 className="mb-2 text-xl font-bold font-heading text-primaryText text-left">
-                    Beginner
+                    Basic
                   </h3>
                   <div className="flex justify-start items-end">
                     <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
-                      $0
+                      $7.99
                     </div>
                     <div className="text-gray-500">
-                      {isMonthly ? "/ month" : "/ year"}
+                      {"/ month"}
                     </div>
                   </div>
                   <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
-                    The perfect way to get started and get used to our tools.
+                    The perfect way to get started
                   </p>
                   <ul className="mb-2 2xl:mb-6 text-primaryText">
-                    {pricingData.map((text, index) => (
+                    {pricingDataBasic.map((text, index) => (
                       <li className="mb-4 flex" key={`${text}-${index}`}>
                         <CheckArrowIcon />
                         <span>{text}</span>
@@ -87,8 +85,8 @@ export const Pricing = () => {
                   </ul>
                   <button
                     className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
-                    onClick={() => setIsModalOpen(true)}
                     aria-label="Get started"
+                    id="basic"
                   >
                     Get Started
                   </button>
@@ -101,17 +99,17 @@ export const Pricing = () => {
                   </h3>
                   <div className="flex justify-start items-end">
                     <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
-                      {isMonthly ? "$19" : "$180"}
+                      $29.99
                     </div>
                     <div className="text-gray-500">
-                      {isMonthly ? "/ month" : "/ year"}
+                    {"/ month"}
                     </div>
                   </div>
                   <p className="mt-8 mb-8 2xl:mb-12 text-gray-500 leading-loose text-left">
-                    Unlock more features and elevate your data analysis.
+                    Unlock more features.
                   </p>
                   <ul className="mb-14 text-primaryText">
-                    {pricingData.map((text, index) => (
+                    {pricingDataStandard.map((text, index) => (
                       <li className="mb-4 flex" key={`${text}-${index}`}>
                         <CheckArrowIcon />
                         <span>{text}</span>
@@ -120,8 +118,8 @@ export const Pricing = () => {
                   </ul>
                   <button
                     className="inline-block text-center py-2 px-4 w-full contained-button leading-loose transition duration-200 mt-20"
-                    onClick={() => setIsModalOpen(true)}
                     aria-label="Get started"
+                    id="standard"
                   >
                     Get Started
                   </button>
@@ -130,21 +128,19 @@ export const Pricing = () => {
               <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
                 <div className="p-8 bg-bgDark3 rounded-3xl">
                   <h3 className="mb-2 text-xl font-bold font-heading text-primaryText text-left">
-                    Premium
+                    Custom
                   </h3>
                   <div className="flex justify-start items-end">
                     <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
-                      {isMonthly ? "$36" : "$390"}
                     </div>
                     <div className="text-gray-500">
-                      {isMonthly ? "/ month" : "/ year"}
                     </div>
                   </div>
                   <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
-                    Experience the full power of our analytic platform
+                    Personalized development
                   </p>
                   <ul className="mb-2 2xl:mb-6 text-primaryText">
-                    {pricingData.map((text, index) => (
+                    {pricingDataCustom.map((text, index) => (
                       <li className="mb-4 flex" key={`${text}-${index}`}>
                         <CheckArrowIcon />
                         <span>{text}</span>
@@ -153,8 +149,8 @@ export const Pricing = () => {
                   </ul>
                   <button
                     className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
-                    onClick={() => setIsModalOpen(true)}
                     aria-label="Get started"
+                    id="custom"
                   >
                     Get Started
                   </button>
