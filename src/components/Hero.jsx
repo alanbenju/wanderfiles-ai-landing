@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.jpg";
+import viaggi from "../assets/images/viaggi.png";
+import codeExample from "../assets/images/code-example.png";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +34,7 @@ export const Hero = () => {
             <h1 className="hidden md:inline">Simplify Your File  </h1>
           </div>
           <h1 className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-primaryText  px-8 sm:px-20 md:px-24 lg:px-24">
-          Data Extraction
+            Data Extraction
           </h1>
         </motion.div>
         <motion.div
@@ -41,7 +43,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h2 className="text-secondaryText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-          Automate and Streamline Your Travel Document Processing with Our Advanced AI-Powered Tool.
+            Automate and Streamline Your Travel Document Processing with Our Advanced AI-Powered Tool.
           </h2>
         </motion.div>
         <motion.div
@@ -64,34 +66,42 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen flex justify-center ">
-            <img
-              src={dashboard.src}
-              alt="Dashboard image"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-            />
+          <div className="relative w-screen flex flex-col lg:flex-row">
+            <div className="flex-1 flex flex-col items-center  justify-center">
+              <div className="w-4/5 lg:w-4/5">
+                <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
+                  Easy usage
+                </h2>
+                <p className="text-secondaryText leading-loose">
+                  1 - Create an API Key
+                </p>
+                <p className="text-secondaryText leading-loose">
+                  2 - Call our API with the key and your file
+                </p>
+                <p className="mb-5 text-secondaryText leading-loose">
+                  3 - Receive your array of Jsons with all your file data
+                </p>
+                <img
+                  src={viaggi.src}
+                  alt="Flight confirmation image"
+                  className="w-full mx-auto z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+                />
+              </div>
+            </div>
+            <div className="flex-1 flex justify-center mt-8 lg:mt-0">
+              <div className="w-4/5 lg:w-4/5">
+                <img
+                  src={codeExample.src}
+                  alt="Code example image"
+                  className="w-full mx-auto z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+                />
+              </div>
+            </div>
           </div>
+
         </motion.div>
-        <div className="relative w-screen flex justify-center ">
-          <div className="shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52 hidden lg:block">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-              className="bg-bgDark2"
-            >
-              <path
-                d="M1200 0L0 0 598.97 114.72 1200 0z"
-                className="shape-fill bg-bgDark1  fill-bgDark1"
-              ></path>
-            </svg>
-          </div>
-        </div>
+
       </div>
-      {isModalOpen && (
-        <InvitationModal />
-      )}
     </section>
   );
 };
