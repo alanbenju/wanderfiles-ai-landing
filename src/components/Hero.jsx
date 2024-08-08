@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import { InvitationModal } from "./InvitationModal";
-import dashboard from "../assets/images/dashboard.jpg";
 import viaggi from "../assets/images/viaggi.png";
 import codeExample from "../assets/images/code-example.png";
 

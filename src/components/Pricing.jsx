@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import { InvitationModal } from "./InvitationModal";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 const pricingDataBasic = [
@@ -160,9 +159,6 @@ export const Pricing = () => {
           </div>
         </motion.div>
       </div>
-      {isModalOpen && (
-        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )}
     </section>
   );
 };

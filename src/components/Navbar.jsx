@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { TailcastLogo } from "../assets/logos/TailcastLogo"
 
-import { TailcastLogo } from "../assets/logos/TailcastLogo";
-import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
   { label: "Home", href: "/#home", ariaLabel: "Home" },
   { label: "Features", href: "/#features", ariaLabel: "Features" },
   { label: "Pricing", href: "/#pricing", ariaLabel: "Pricing" },
- // { label: "Feedback", href: "/#feedback", ariaLabel: "Feedback" },
   { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
 ];
 
@@ -91,14 +89,6 @@ export const Navbar = () => {
                   {label}
                 </a>
               ))}
-              <a
-                className="outlined-button pl-6 pr-8 pt-2 pb-2  flex"
-                href="https://github.com/matt765/Tidestream"
-                target="_blank"
-              >
-                <GithubIcon />
-                Source code
-              </a>
             </div>
           </motion.div>
         )}
